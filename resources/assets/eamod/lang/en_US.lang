@@ -1,0 +1,82 @@
+
+
+item.enchantmentPearl.name=Enchantment Pearl
+item.ErfahrungIngot.name=Erfahrung Ingot
+item.ExperienceApple.name=Experience Apple
+item.ExperienceAxeTier1.name=Experience Axe
+item.experienceGlowStoneDust.name=Experience Glow Stone Dust
+item.ExperienceIngot.name=Experience Ingot
+item.experienceJewel.name=Experience Jewel
+item.experienceMultiTool.name=Experience MultiTool
+item.ExperiencePickaxeTier1.name=Experience Pickaxe
+item.ExperienceShovelTier1.name=Experience Shovel
+item.ExperienceSwordTier1.name=Experience Sword
+
+item.weakExperienceAxe.name=Weak Experience Axe
+item.weakExperienceIngot.name=Weak Experience Ingot
+item.weakExperiencePickaxe.name=Weak Experience Pickaxe
+item.weakExperienceShovel.name=Weak Experience Shovel
+item.weakExperienceSword.name=Weak Experience Sword
+
+
+item.GreedyAshes.name=Greedy Ash
+item.SmallGreedyAshes.name=Small Greedy Ash
+item.smallSmallGreedyAshes.name=Very Small Greedy Ash
+item.lightDirtyAsh.name=LightDirty Ash
+item.smallLightDirtyAsh.name=Small Light Dirty Ash
+item.smallSmallLightDirtyAsh.name=Very Small Light Dirty Ash
+item.smallSmallSmallLightDirtyAsh.name=Very Very Small Light Dirty Ash
+
+item.holyAsh.name=Holy Ash
+item.smallHolyAsh.name=Small Holy Ash
+item.smallSmallHolyAsh.name=Very Small Holy Ash
+item.smallSmallSmallHolyAsh.name=Very Very Small Holy Ash
+item.smallSmallSmallSmallHolyAsh.name=Very Very Very Small Holy Ash
+
+item.erfahrungRod.name=Erfahrung Rod
+item.ExperienceRod.name=Experience Rod
+item.experienceCondenser.name=Experience Condenser
+item.advancedExperienceCondenser.name=Advanced Experience Condenser
+item.erfahrungMultiTool.name=Erfahrung MultiTool
+item.experienceAppleShard.name=Fragments of Experience Apple
+item.spellPaperF.name=Flying Spell Paper
+
+item.experienceBoneMeal.name=Experience BoneMeal
+item.mechanicalExperienceBoneMeal.name=Mechanical Experience BoneMeal
+item.timeOfSand.name=Time of Sand
+item.mechanicalTimeOfSand.name=Mechanical Time of Sand
+item.superDye.name=Super Dye
+item.highFrequencyRedStoneDust.name=High Frequency RedStone Dust
+
+tile.ErfahrungIngotBlock.name=Block of ErfahrungIngot
+tile.ExperienceGlowStone.name=Experience GlowStone
+tile.ExperienceIngotBlock.name=Block of ExperienceIngot
+tile.netherStarBlock.name=Block of NetherStar
+tile.netherStarBlock2.name=Block of NetherStar 2
+tile.netherStarBlock3.name=Block of NetherStar 3
+tile.netherStarBlock4.name=Block of NetherStar 4
+tile.netherStarBlock5.name=Block of NetherStar 5
+tile.RitualGlassTier1.name=Ritual Glass Tier1
+tile.RitualGlassTier2.name=Ritual Glass Tier2
+tile.RitualGlassTier3.name=Ritual Glass Tier3
+tile.RitualGlassTier4.name=Ritual Glass Tier4
+tile.RitualStoneTier1.name=Ritual Stone Tier1
+tile.RitualStoneTier2.name=Ritual Stone Tier2
+tile.RitualStoneTier3.name=Ritual Stone Tier3
+tile.RitualStoneTier4.name=Ritual Stone Tier4
+tile.ritualLauncherTier1.name=Ritual Launcher Tier1
+tile.ritualLauncherTier2.name=Ritual Launcher Tier2
+tile.ritualLauncherTier3.name=Ritual Launcher Tier3
+tile.ritualLauncherTier4.name=Ritual Launcher Tier4
+tile.cabinetStone.name=Cabinet Stone
+tile.ExperienceOre.name=Experience Ore
+tile.accelerateStone.name=Accelerate Stone
+tile.advancedAccelerateStone.name=Advanced Accelerate Stone
+tile.growthStone.name=Growth Stone
+tile.advancedGrowthStone.name=Advanced Growth Stone
+tile.highFrequencyRedStoneBlock.name=High Frequency RedStone Block
+tile.UserRegistrationStone.name=User Registration Stone
+tile.superHopper.name=Super Hopper
+
+
+itemGroup.experienceApple=Experience Apple
