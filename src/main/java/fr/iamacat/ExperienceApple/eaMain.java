@@ -30,7 +30,7 @@ import java.io.File;
 public class eaMain {
     public static final String MOD_ID = "ExperienceApple";
 
-    @SidedProxy(clientSide = "Client.clientProxy", serverSide = "Common.commonProxy")
+    @SidedProxy(clientSide = "fr.iamacat.Client.clientProxy", serverSide = "fr.iamacat.Common.commonProxy")
 	public static commonProxy proxy;
 
     public static Block experienceManaPool;
