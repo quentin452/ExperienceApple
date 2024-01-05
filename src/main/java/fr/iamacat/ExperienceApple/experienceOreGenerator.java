@@ -1,5 +1,4 @@
-package ExperienceApple;
-import java.util.Random;
+package fr.iamacat.ExperienceApple;
 
 import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.init.Blocks;
@@ -7,6 +6,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldProviderSurface;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+
+import java.util.Random;
 
 public class experienceOreGenerator implements IWorldGenerator {
 

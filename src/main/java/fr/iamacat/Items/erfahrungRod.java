@@ -1,6 +1,6 @@
-package Items;
+package fr.iamacat.Items;
 
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.item.Item;
 
 public class erfahrungRod extends Item{

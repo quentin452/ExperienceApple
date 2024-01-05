@@ -1,12 +1,12 @@
-package Items;
+package fr.iamacat.Items;
 
-import java.util.Random;
-
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class mechanicalExperienceBoneMeal extends Item{
     public mechanicalExperienceBoneMeal(){
@@ -33,7 +33,7 @@ public class mechanicalExperienceBoneMeal extends Item{
 		return true;
 	}
     public boolean showDurabilityBar(){
-		return true;	
+		return true;
     }
     public boolean isItemTool(ItemStack p_77616_1_)
     {

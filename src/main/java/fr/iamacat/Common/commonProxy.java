@@ -1,18 +1,13 @@
-package Common;
- 
-import ExperienceApple.PlayerTick;
-import TileEntitys.tileAccelerateBlock;
-import TileEntitys.tileAdvancedAccelerateBlock;
-import TileEntitys.tileAdvancedgrowthStone;
-import TileEntitys.tileEntityUserRegistrationStone;
-import TileEntitys.tileRitualLauncher;
-import TileEntitys.tileSuperHopper;
-import TileEntitys.tilegrowthStone;
+package fr.iamacat.Common;
+
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
+import fr.iamacat.ExperienceApple.PlayerTick;
+import fr.iamacat.TileEntitys.*;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
- 
+
 public class commonProxy {
 	public World getClientWorld() {
 		return null;

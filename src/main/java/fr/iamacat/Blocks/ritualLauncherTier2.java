@@ -1,10 +1,9 @@
-package Blocks;
-import java.util.Random;
+package fr.iamacat.Blocks;
 
-import ExperienceApple.eaMain;
-import TileEntitys.tileRitualLauncher;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
+import fr.iamacat.TileEntitys.tileRitualLauncher;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -12,6 +11,8 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
 public class ritualLauncherTier2 extends BlockGlass implements ITileEntityProvider
 {
     @SideOnly(Side.CLIENT)
@@ -54,9 +55,9 @@ public class ritualLauncherTier2 extends BlockGlass implements ITileEntityProvid
     public void randomDisplayTick(World world, int x, int y, int z, Random rnd)
     {
     	if (eaMain.particle==true) return;
-        double rx = (double)((float)x +rnd.nextFloat());
-        double ry = (double)((float)y +rnd.nextFloat());
-        double rz = (double)((float)z +rnd.nextFloat());
+        double rx = (float)x +rnd.nextFloat();
+        double ry = (float)y +rnd.nextFloat();
+        double rz = (float)z +rnd.nextFloat();
         world.spawnParticle("happyVillager",rx,ry,rz,0.0D,0.0D,0.0D);
     }
     @Override

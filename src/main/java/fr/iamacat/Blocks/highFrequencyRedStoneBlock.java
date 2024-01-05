@@ -1,10 +1,8 @@
-package Blocks;
+package fr.iamacat.Blocks;
 
-import java.util.Random;
-
-import ExperienceApple.eaMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -12,6 +10,8 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+
+import java.util.Random;
 
 public class highFrequencyRedStoneBlock extends Block
 {
@@ -22,7 +22,7 @@ public class highFrequencyRedStoneBlock extends Block
 
     @SideOnly(Side.CLIENT)
     private IIcon SideIcon;
-    
+
     public highFrequencyRedStoneBlock() {
         super(Material.rock);
         this.setCreativeTab(eaMain.tabAdd);
@@ -50,19 +50,19 @@ public class highFrequencyRedStoneBlock extends Block
         }
     	return Power;
     }
-    
+
     public boolean isSideSolid(IBlockAccess block,int x,int y,int z,ForgeDirection side) {
         return true;
     }
-    
+
     public boolean canProvidePower() {
         return true;
     }
-    
+
     public void onBlockAdded(World world,int x,int y,int z) {
         world.scheduleBlockUpdate(x,y,z,this,1);
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister par1IconRegister)
@@ -70,7 +70,7 @@ public class highFrequencyRedStoneBlock extends Block
         this.TopIcon = par1IconRegister.registerIcon("eamod:highFrequencyRedStoneBlock");
         this.SideIcon = par1IconRegister.registerIcon("eamod:highFrequencyRedStoneBlock");
     }
-    
+
     public void updateTick(World world,int x,int y,int z,Random rand) {
         int metadata=world.getBlockMetadata(x,y,z);
         if (metadata==0){
@@ -89,7 +89,7 @@ public class highFrequencyRedStoneBlock extends Block
             }
         }
     }
-    
+
     public void onNeighborBlockChange(World world,int x,int y,int z,Block block) {
         if (changing) return;
         int metadata=world.getBlockMetadata(x,y,z);

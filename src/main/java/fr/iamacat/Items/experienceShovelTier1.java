@@ -1,6 +1,5 @@
-package Items;
-
-import ExperienceApple.eaMain;
+package fr.iamacat.Items;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;

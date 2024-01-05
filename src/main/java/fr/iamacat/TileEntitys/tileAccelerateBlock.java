@@ -1,6 +1,6 @@
-package TileEntitys;
+package fr.iamacat.TileEntitys;
 
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.client.renderer.texture.ITickable;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -27,16 +27,16 @@ public class tileAccelerateBlock extends TileEntity{
 		int x=this.xCoord;
 		int y=this.yCoord;
 		int z=this.zCoord;
-		accelerate((TileEntity)world.getTileEntity(x+1, y, z),world,x+1,y,z);
-		accelerate((TileEntity)world.getTileEntity(x-1, y, z),world,x-1,y,z);
-		accelerate((TileEntity)world.getTileEntity(x, y+1, z),world,x,y+1,z);
-		accelerate((TileEntity)world.getTileEntity(x, y-1, z),world,x,y-1,z);
-		accelerate((TileEntity)world.getTileEntity(x, y, z+1),world,x,y,z+1);
-		accelerate((TileEntity)world.getTileEntity(x, y, z-1),world,x,y,z-1);
+		accelerate(world.getTileEntity(x+1, y, z),world,x+1,y,z);
+		accelerate(world.getTileEntity(x-1, y, z),world,x-1,y,z);
+		accelerate(world.getTileEntity(x, y+1, z),world,x,y+1,z);
+		accelerate(world.getTileEntity(x, y-1, z),world,x,y-1,z);
+		accelerate(world.getTileEntity(x, y, z+1),world,x,y,z+1);
+		accelerate(world.getTileEntity(x, y, z-1),world,x,y,z-1);
 	}
 	public void accelerate(TileEntity entity,World world,int x,int y,int z){
 		if (world.isRemote)return;
-		if (world.getBlock(x,y,z)==eaMain.accelerateStone)return;
+		if (world.getBlock(x,y,z)== eaMain.accelerateStone)return;
 		if (world.getBlock(x,y,z)==eaMain.advancedAccelerateStone)return;
 		if (entity==null)return;
 		if (entity.isInvalid())return;

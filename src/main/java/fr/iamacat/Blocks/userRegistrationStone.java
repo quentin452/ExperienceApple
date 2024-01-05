@@ -1,12 +1,10 @@
-package Blocks;
-import java.util.Random;
-import java.util.UUID;
+package fr.iamacat.Blocks;
 
-import ExperienceApple.eaMain;
-import ExperienceApple.ritualGlass;
-import TileEntitys.tileEntityUserRegistrationStone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.ritualGlass;
+import fr.iamacat.TileEntitys.tileEntityUserRegistrationStone;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -16,6 +14,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
+import java.util.UUID;
 public class userRegistrationStone extends BlockContainer implements ITileEntityProvider
 {
     @SideOnly(Side.CLIENT)
@@ -73,8 +74,8 @@ public class userRegistrationStone extends BlockContainer implements ITileEntity
     			if (entity.getString()=="null"){
     				return true;
     			}
-    			EntityPlayer playerE=ritualGlass.lookupPlayer(UUID.fromString(entity.getString()));
-    			
+    			EntityPlayer playerE= ritualGlass.lookupPlayer(UUID.fromString(entity.getString()));
+
     			if (!(playerE==null)){
     				player.addChatMessage(new ChatComponentTranslation(playerE.getDisplayName()));
     			}else{

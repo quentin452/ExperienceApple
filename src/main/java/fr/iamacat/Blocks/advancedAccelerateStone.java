@@ -1,10 +1,9 @@
-package Blocks;
-import java.util.Random;
+package fr.iamacat.Blocks;
 
-import ExperienceApple.eaMain;
-import TileEntitys.tileAdvancedAccelerateBlock;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
+import fr.iamacat.TileEntitys.tileAdvancedAccelerateBlock;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -12,6 +11,8 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
 public class advancedAccelerateStone extends BlockGlass implements ITileEntityProvider
 {
     @SideOnly(Side.CLIENT)
@@ -61,9 +62,9 @@ public class advancedAccelerateStone extends BlockGlass implements ITileEntityPr
     {
     	if (eaMain.particle==true) return;
     	for (int i = 0; i < 64; i++){
-    		double rx = (double)((float)x +rnd.nextFloat());
-    		double ry = (double)((float)y +rnd.nextFloat());
-    		double rz = (double)((float)z +rnd.nextFloat());
+    		double rx = (float)x +rnd.nextFloat();
+    		double ry = (float)y +rnd.nextFloat();
+    		double rz = (float)z +rnd.nextFloat();
     		double sx = rnd.nextFloat()*3-1.5;
     		double sy = rnd.nextFloat()*2-1.5;
     		double sz = rnd.nextFloat()*3-1.5;

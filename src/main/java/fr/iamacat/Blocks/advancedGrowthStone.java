@@ -1,10 +1,9 @@
-package Blocks;
-import java.util.Random;
+package fr.iamacat.Blocks;
 
-import ExperienceApple.eaMain;
-import TileEntitys.tileAdvancedgrowthStone;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
+import fr.iamacat.TileEntitys.tileAdvancedgrowthStone;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -12,6 +11,8 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
 public class advancedGrowthStone extends BlockGlass implements ITileEntityProvider
 {
     @SideOnly(Side.CLIENT)
@@ -61,9 +62,9 @@ public class advancedGrowthStone extends BlockGlass implements ITileEntityProvid
     {
     	if (eaMain.particle==true) return;
     	for (int i = 0; i < 2; i++){
-    		double rx = (double)((float)x +rnd.nextFloat()*3-1);
-    		double ry = (double)((float)y +rnd.nextFloat()*3-1);
-    		double rz = (double)((float)z +rnd.nextFloat()*3-1);
+    		double rx = (float)x +rnd.nextFloat()*3-1;
+    		double ry = (float)y +rnd.nextFloat()*3-1;
+    		double rz = (float)z +rnd.nextFloat()*3-1;
 
     		world.spawnParticle("happyVillager",rx,ry,rz,0,0,0);
     	}

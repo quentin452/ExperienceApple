@@ -1,6 +1,6 @@
-package Items;
+package fr.iamacat.Items;
 
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -15,7 +15,7 @@ public class experienceApple extends Item{
         this.setMaxStackSize(1);
         this.setContainerItem(this);
     }
-    
+
     public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int x, int y, int z, int side, float disX, float disY, float disZ){
     	/*if (world.getBlock(x,y,z)==Blocks.glass) {
     		if (!experiencePull(player, 50,world)){return false;}
@@ -34,7 +34,7 @@ public class experienceApple extends Item{
     		}
     		world.setBlock(x,y,z,eaMain.highFrequencyRedStoneBlock);
     	}*/
-    	
+
     	if (world.getBlock(x,y,z)==Blocks.glass) {
     			experiencePull(player,50,world);
     		if (!eaMain.particle){

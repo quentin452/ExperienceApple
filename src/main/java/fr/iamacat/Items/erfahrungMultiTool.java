@@ -1,8 +1,7 @@
-package Items;
+package fr.iamacat.Items;
 
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.block.Block;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -36,14 +35,14 @@ public class erfahrungMultiTool extends ItemTool{
 			ItemStack itemstack=new ItemStack(Item.getItemFromBlock(world.getBlock(x,y,z)));
 			world.setBlock(x,y,z,Blocks.air);
 			EntityItem itementity=new EntityItem(world,(double)x+0.5,(double)y+0.5,(double)z+0.5,itemstack);
-			world.spawnEntityInWorld((Entity)itementity);
-			
+			world.spawnEntityInWorld(itementity);
+
 		}
     	if (!eaMain.particle){
         	for (int i = 0; i < 20; i++){
 				world.spawnParticle("fireworksSpark",x+Math.random(),y+Math.random(),z+Math.random(),0.0D,0.0D,0.0D);
 			}
     		}
-    	return false;	
+    	return false;
     }
 }

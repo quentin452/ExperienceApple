@@ -1,15 +1,15 @@
-package Blocks;
+package fr.iamacat.Blocks;
 
-import java.util.Random;
-
-import ExperienceApple.eaMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+
+import java.util.Random;
 
 public class experienceGlowStone extends Block{
 

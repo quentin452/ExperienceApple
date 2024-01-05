@@ -1,6 +1,6 @@
-package Items;
+package fr.iamacat.Items;
 
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 
 public class spellPaperFly extends spellPaper{
 	public static boolean canFly=false;

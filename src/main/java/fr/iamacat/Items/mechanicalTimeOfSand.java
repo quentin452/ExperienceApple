@@ -1,6 +1,5 @@
-package Items;
-
-import ExperienceApple.eaMain;
+package fr.iamacat.Items;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.client.renderer.texture.ITickable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -22,7 +21,7 @@ public class mechanicalTimeOfSand extends Item{
     	if (world.isRemote)return true;
 		if (world.getBlock(x,y,z)==eaMain.accelerateStone)return true;
 		if (world.getBlock(x,y,z)==eaMain.advancedAccelerateStone)return true;
-		TileEntity entity=(TileEntity)world.getTileEntity(x, y, z);
+		TileEntity entity= world.getTileEntity(x, y, z);
 		if (entity==null)return true;
 		if (entity.isInvalid())return true;
 		if (entity instanceof ITickable)return true;
@@ -33,7 +32,7 @@ public class mechanicalTimeOfSand extends Item{
 		return true;
 	}
     public boolean showDurabilityBar(){
-		return true;	
+		return true;
     }
     public boolean isItemTool(ItemStack p_77616_1_)
     {

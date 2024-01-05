@@ -1,14 +1,14 @@
-package TileEntitys;
+package fr.iamacat.TileEntitys;
 
-import java.util.Random;
-
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class tilegrowthStone extends TileEntity{
     @Override
@@ -28,17 +28,17 @@ public class tilegrowthStone extends TileEntity{
 		int x=this.xCoord;
 		int y=this.yCoord;
 		int z=this.zCoord;
-		growth((TileEntity)world.getTileEntity(x+1, y, z),world,x+1,y,z);
-		growth((TileEntity)world.getTileEntity(x-1, y, z),world,x-1,y,z);
-		growth((TileEntity)world.getTileEntity(x, y+1, z),world,x,y+1,z);
-		growth((TileEntity)world.getTileEntity(x, y-1, z),world,x,y-1,z);
-		growth((TileEntity)world.getTileEntity(x, y, z+1),world,x,y,z+1);
-		growth((TileEntity)world.getTileEntity(x, y, z-1),world,x,y,z-1);
+		growth(world.getTileEntity(x+1, y, z),world,x+1,y,z);
+		growth(world.getTileEntity(x-1, y, z),world,x-1,y,z);
+		growth(world.getTileEntity(x, y+1, z),world,x,y+1,z);
+		growth(world.getTileEntity(x, y-1, z),world,x,y-1,z);
+		growth(world.getTileEntity(x, y, z+1),world,x,y,z+1);
+		growth(world.getTileEntity(x, y, z-1),world,x,y,z-1);
 
 	}
 	public void growth(TileEntity entity,World world,int x,int y,int z){
 		if (world.isRemote)return;
-		if (world.getBlock(x,y,z)==eaMain.growthStone)return;
+		if (world.getBlock(x,y,z)== eaMain.growthStone)return;
 		for (int ix = 0; ix < 1; ix++){
 			world.getBlock(x,y,z).updateTick(this.worldObj,x,y,z,new Random());
 		}

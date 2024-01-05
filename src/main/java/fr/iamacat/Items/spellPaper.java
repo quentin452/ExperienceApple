@@ -1,5 +1,4 @@
-package Items;
-
+package fr.iamacat.Items;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.PlayerCapabilities;
@@ -18,9 +17,9 @@ public class spellPaper extends Item{
 
     public ItemStack onItemRightClick(ItemStack item, World world, EntityPlayer player){
     	if (world.isRemote){
-    		Entity entity=(Entity)player;
+    		Entity entity= player;
     		PlayerCapabilities capabilities=((EntityPlayer)entity).capabilities;
-    		if (ability==true) {
+    		if (ability) {
     			ability=false;
     			capabilities.allowFlying=false;
     			player.addChatMessage(new ChatComponentTranslation("off"));

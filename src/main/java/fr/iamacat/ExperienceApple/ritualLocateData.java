@@ -1,4 +1,4 @@
-package ExperienceApple;
+package fr.iamacat.ExperienceApple;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -6,7 +6,7 @@ import net.minecraft.init.Blocks;
 public class ritualLocateData {
     public static final int ritualAmount=30;
     public static final int ritualsize=4;
-    public static final Block ritualLocate[][][][]=new Block[ritualAmount][ritualsize-1][ritualsize-1][ritualsize-1];
+    public static final Block[][][][] ritualLocate =new Block[ritualAmount][ritualsize-1][ritualsize-1][ritualsize-1];
     public static Block Data(int n,int x,int y,int z){
     	ritualLocate[0][0][0][0]=Blocks.air;
     	ritualLocate[0][0][0][1]=Blocks.air;
@@ -707,7 +707,7 @@ public class ritualLocateData {
     	ritualLocate[24][2][2][0]=Blocks.air;
     	ritualLocate[24][2][2][1]=Blocks.air;
     	ritualLocate[24][2][2][2]=Blocks.air;
-    	
+
     	ritualLocate[25][0][0][0]=Blocks.air;
     	ritualLocate[25][0][0][1]=Blocks.air;
     	ritualLocate[25][0][0][2]=Blocks.air;
@@ -735,7 +735,7 @@ public class ritualLocateData {
     	ritualLocate[25][2][2][0]=Blocks.air;
     	ritualLocate[25][2][2][1]=Blocks.air;
     	ritualLocate[25][2][2][2]=Blocks.air;
-    	
+
     	ritualLocate[26][0][0][0]=Blocks.air;
     	ritualLocate[26][0][0][1]=Blocks.air;
     	ritualLocate[26][0][0][2]=Blocks.air;
@@ -763,7 +763,7 @@ public class ritualLocateData {
     	ritualLocate[26][2][2][0]=Blocks.air;
     	ritualLocate[26][2][2][1]=Blocks.air;
     	ritualLocate[26][2][2][2]=Blocks.air;
-    	
+
     	return ritualLocate[n][x][y][z];
     }
 }

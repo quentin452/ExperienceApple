@@ -1,7 +1,7 @@
-package Items;
+package fr.iamacat.Items;
 
-import ExperienceApple.eaMain;
-import net.minecraft.creativetab.CreativeTabs;
+
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.item.Item;
 
 public class experienceGlowStonePowder extends Item{

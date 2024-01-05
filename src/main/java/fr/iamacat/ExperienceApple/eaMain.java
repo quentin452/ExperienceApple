@@ -1,88 +1,15 @@
-package ExperienceApple;
+package fr.iamacat.ExperienceApple;
 
 
-import java.io.File;
-
-import Blocks.accelerateStone;
-import Blocks.advancedAccelerateStone;
-import Blocks.advancedGrowthStone;
-import Blocks.cabinetStone;
-import Blocks.condensedExperienceOre;
-import Blocks.erfahrungIngotBlock;
-import Blocks.experienceGas;
-import Blocks.experienceGlowStone;
-import Blocks.experienceIngotBlock;
-import Blocks.experienceOre;
-import Blocks.growthStone;
-import Blocks.highFrequencyRedStoneBlock;
-import Blocks.netherStarBlock;
-import Blocks.netherStarBlock2;
-import Blocks.netherStarBlock3;
-import Blocks.netherStarBlock4;
-import Blocks.netherStarBlock5;
-import Blocks.ritualGlassTier1;
-import Blocks.ritualGlassTier2;
-import Blocks.ritualGlassTier3;
-import Blocks.ritualGlassTier4;
-import Blocks.ritualLauncherTier1;
-import Blocks.ritualLauncherTier2;
-import Blocks.ritualLauncherTier3;
-import Blocks.ritualLauncherTier4;
-import Blocks.ritualStoneTier1;
-import Blocks.ritualStoneTier2;
-import Blocks.ritualStoneTier3;
-import Blocks.ritualStoneTier4;
-import Blocks.superHopper;
-import Blocks.userRegistrationStone;
-import Common.commonProxy;
-import Items.advancedExperienceCondenser;
-import Items.enchantmentPearl;
-import Items.erfahrungIngot;
-import Items.erfahrungMultiTool;
-import Items.erfahrungRod;
-import Items.experienceApple;
-import Items.experienceAppleShard;
-import Items.experienceAxeTier1;
-import Items.experienceBoneMeal;
-import Items.experienceCondenser;
-import Items.experienceGlowStonePowder;
-import Items.experienceIngot;
-import Items.experienceJewel;
-import Items.experienceMultiTool;
-import Items.experiencePickaxeTier1;
-import Items.experienceRod;
-import Items.experienceShovelTier1;
-import Items.experienceSwordTier1;
-import Items.greedyAshes;
-import Items.healQuartz;
-import Items.highFrequencyRedStoneDust;
-import Items.holyAsh;
-import Items.lightDirtyAsh;
-import Items.mechanicalExperienceBoneMeal;
-import Items.mechanicalTimeOfSand;
-import Items.smallGreedyAshes;
-import Items.smallHolyAsh;
-import Items.smallLightDirtyAsh;
-import Items.smallSmallGreedyAshes;
-import Items.smallSmallHolyAsh;
-import Items.smallSmallLightDirtyAsh;
-import Items.smallSmallSmallHolyAsh;
-import Items.smallSmallSmallLightDirtyAsh;
-import Items.smallSmallSmallSmallHolyAsh;
-import Items.spellPaperFly;
-import Items.superDye;
-import Items.timeOfSand;
-import Items.weakExperienceAxe;
-import Items.weakExperienceIngot;
-import Items.weakExperiencePickaxe;
-import Items.weakExperienceShovel;
-import Items.weakExperienceSword;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import fr.iamacat.Blocks.*;
+import fr.iamacat.Common.commonProxy;
+import fr.iamacat.Items.*;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -94,21 +21,23 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
+import java.io.File;
+
 @Mod(
 	modid="ExperienceApple"
 )
 
 public class eaMain {
     public static final String MOD_ID = "ExperienceApple";
-    
+
     @SidedProxy(clientSide = "Client.clientProxy", serverSide = "Common.commonProxy")
 	public static commonProxy proxy;
-    
+
     public static Block experienceManaPool;
-    
-    
-    
-    
+
+
+
+
     public static Item experienceApple;
     public static Item experienceGlowStonePowder;
     public static Item experienceIngot;
@@ -198,14 +127,6 @@ public class eaMain {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event){
     	//experienceManaPool = new experienceManaPool();
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
         experienceApple = new experienceApple();
         experienceGlowStonePowder = new experienceGlowStonePowder();
         experienceIngot = new experienceIngot();
@@ -248,7 +169,7 @@ public class eaMain {
         highFrequencyRedStoneDust = new highFrequencyRedStoneDust();
         superDye = new superDye();
         healQuartz = new healQuartz();
-        
+
         superHopper = new superHopper();
         experienceOre = new experienceOre();
         condensedExperienceOre = new condensedExperienceOre();
@@ -296,14 +217,14 @@ public class eaMain {
     	GameRegistry.registerWorldGenerator(new experienceOreGenerator(), 0);
 		proxy.registerTileEntity();
 		proxy.registerEventHandlers();
-        
+
         //GameRegistry.registerBlock(experienceManaPool, "EApple:experienceManaPool");
 
-		
-		
-		
-		
-		
+
+
+
+
+
         GameRegistry.registerItem(experienceApple,"EApple:ExperienceApple");
         GameRegistry.registerItem(experienceGlowStonePowder, "EApple:ExperienceGlowStonePowder");
         GameRegistry.registerItem(experienceIngot, "EApple:ExperienceIngot");
@@ -379,7 +300,7 @@ public class eaMain {
         GameRegistry.registerBlock(netherStarBlock4, "EApple:netherStarBlock4");
         GameRegistry.registerBlock(netherStarBlock5, "EApple:netherStarBlock5");
         GameRegistry.registerBlock(highFrequencyRedStoneBlock, "EApple:highFrequencyRedStoneBlock");
-        
+
         GameRegistry.addShapelessRecipe(new ItemStack(eaMain.superDye,1),highFrequencyRedStoneDust,holyAsh);
         GameRegistry.addShapelessRecipe(new ItemStack(eaMain.experienceApple,1),Items.apple, Items.emerald);
         GameRegistry.addShapelessRecipe(new ItemStack(eaMain.experienceIngot,9),eaMain.experienceIngotBlock);
@@ -410,7 +331,7 @@ public class eaMain {
         GameRegistry.addShapelessRecipe(new ItemStack(smallSmallSmallSmallHolyAsh,9),smallSmallSmallHolyAsh);
         GameRegistry.addShapelessRecipe(new ItemStack(weakExperienceIngot),experienceApple,Items.iron_ingot);
         GameRegistry.addShapelessRecipe(new ItemStack(superHopper),Blocks.hopper,highFrequencyRedStoneDust);
-        
+
         GameRegistry.addRecipe(new ItemStack(eaMain.spellPaperF,1),"#F#","FPF","#F#",'F',Items.feather,'#',holyAsh,'P',Items.paper);
         GameRegistry.addRecipe(new ItemStack(eaMain.growthStone,1),"NBN","ECE","HGH",'N',netherStarBlock3,'B',Items.bone,'C',cabinetStone,'H',holyAsh,'E',experienceIngot,'G',experienceBoneMeal);
         GameRegistry.addRecipe(new ItemStack(eaMain.advancedGrowthStone,1),"NBN","ECE","HGH",'N',netherStarBlock4,'B',Items.bone,'C',growthStone,'H',holyAsh,'E',erfahrungIngot,'G',mechanicalExperienceBoneMeal);
@@ -424,7 +345,7 @@ public class eaMain {
         GameRegistry.addRecipe(new ItemStack(eaMain.weakExperienceShovel,1),"I  ","S  ","S  ",'I',weakExperienceIngot,'S',Items.stick);
         GameRegistry.addRecipe(new ItemStack(eaMain.weakExperienceAxe,1),"II ","IS "," S ",'I',weakExperienceIngot,'S',Items.stick);
         GameRegistry.addRecipe(new ItemStack(eaMain.weakExperiencePickaxe,1),"III"," S "," S ",'I',weakExperienceIngot,'S',Items.stick);
-        
+
         GameRegistry.addRecipe(new ItemStack(eaMain.erfahrungMultiTool,1),"GBG","PTP","GEG",'G',new ItemStack(Items.golden_apple,0,1),'B',erfahrungIngotBlock,'P',enchantmentPearl,'T',experienceMultiTool,'E',advancedExperienceCondenser);
         GameRegistry.addRecipe(new ItemStack(eaMain.experienceJewel),"GEG","E#E","GEG",'E',Items.emerald,'G',experienceGlowStonePowder,'#',enchantmentPearl);
         GameRegistry.addRecipe(new ItemStack(eaMain.enchantmentPearl),"###","#E#","###",'E',Items.ender_pearl,'#',Items.enchanted_book);
@@ -466,11 +387,11 @@ public class eaMain {
         GameRegistry.addRecipe(new ItemStack(smallHolyAsh),"###","###","###",'#',smallSmallHolyAsh);
         GameRegistry.addRecipe(new ItemStack(smallSmallHolyAsh),"###","###","###",'#',smallSmallSmallHolyAsh);
         GameRegistry.addRecipe(new ItemStack(smallSmallSmallHolyAsh),"###","###","###",'#',smallSmallSmallSmallHolyAsh);
-        
+
     	GameRegistry.addSmelting(experienceAppleShard,new ItemStack(smallGreedyAshes),0);
     	GameRegistry.addSmelting(smallSmallGreedyAshes,new ItemStack(smallSmallLightDirtyAsh),0);
     	GameRegistry.addSmelting(smallSmallSmallLightDirtyAsh,new ItemStack(smallSmallSmallHolyAsh),0);
-    	
+
     	OreDictionary.registerOre("dyeBlack",superDye);
     	OreDictionary.registerOre("dyeRed",superDye);
         OreDictionary.registerOre("dyeGreen",superDye);
@@ -487,6 +408,6 @@ public class eaMain {
     	OreDictionary.registerOre("dyeMagenta",superDye);
     	OreDictionary.registerOre("dyeOrange",superDye);
     	OreDictionary.registerOre("dyeWhite",superDye);
-		
+
 	}
 }

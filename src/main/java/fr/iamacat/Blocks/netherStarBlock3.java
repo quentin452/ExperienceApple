@@ -1,8 +1,8 @@
-package Blocks;
+package fr.iamacat.Blocks;
 
-import ExperienceApple.eaMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -20,7 +20,7 @@ public class netherStarBlock3 extends Block{
         super(Material.iron);
         this.setCreativeTab(eaMain.tabAdd);
         this.setBlockName("netherStarBlock3");
-        //this.setHardness(1.5F);        
+        //this.setHardness(1.5F);
         this.setHardness(1.5F);
 
     }

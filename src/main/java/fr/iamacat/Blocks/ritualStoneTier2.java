@@ -1,14 +1,15 @@
-package Blocks;
-import java.util.Random;
+package fr.iamacat.Blocks;
 
-import ExperienceApple.eaMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
 public class ritualStoneTier2 extends BlockGlass
 {
     @SideOnly(Side.CLIENT)
@@ -53,9 +54,9 @@ public class ritualStoneTier2 extends BlockGlass
     {
     	if (eaMain.particle==true) return;
     	for (int i = 0; i < 2; i++){
-    		double rx = (double)((float)x +rnd.nextFloat());
-        	double ry = (double)((float)y +rnd.nextFloat());
-        	double rz = (double)((float)z +rnd.nextFloat());
+    		double rx = (float)x +rnd.nextFloat();
+        	double ry = (float)y +rnd.nextFloat();
+        	double rz = (float)z +rnd.nextFloat();
         	world.spawnParticle("happyVillager",rx,ry,rz,0.0D,0.0D,0.0D);
     	}
     }

@@ -1,4 +1,4 @@
-package TileEntitys;
+package fr.iamacat.TileEntitys;
 
 import net.minecraft.tileentity.TileEntityHopper;
 
@@ -13,12 +13,12 @@ public class tileSuperHopper extends TileEntityHopper{
         	}
 		}
     }
-	
+
 	public boolean func_145888_j()
     {
         return false;
     }
-	
+
 	public String getInventoryName()
     {
         return "eaMain:superHopper";

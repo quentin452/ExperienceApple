@@ -1,6 +1,6 @@
-package TileEntitys;
+package fr.iamacat.TileEntitys;
 
-import ExperienceApple.ritualGlass;
+import fr.iamacat.ExperienceApple.ritualGlass;
 import net.minecraft.tileentity.TileEntity;
 
 public class tileRitualLauncher extends TileEntity{
@@ -18,14 +18,14 @@ public class tileRitualLauncher extends TileEntity{
 	public static boolean buffer=false;
 	@Override
 	public void updateEntity() {
-		
-		if (buffer==false && this.worldObj.isBlockIndirectlyGettingPowered(this.xCoord, this.yCoord, this.zCoord)==true){
+
+		if (!buffer && this.worldObj.isBlockIndirectlyGettingPowered(this.xCoord, this.yCoord, this.zCoord)){
 			ritualGlass.ritualActive(null, worldObj, this.xCoord, this.yCoord, this.zCoord);
 		}
-		
+
 		buffer=this.worldObj.isBlockIndirectlyGettingPowered(this.xCoord, this.yCoord, this.zCoord);
-		
+
 		//System.out.println(this.worldObj.isBlockIndirectlyGettingPowered(this.xCoord, this.yCoord, this.zCoord));
-		
+
 	}
 }

@@ -1,4 +1,4 @@
-package TileEntitys;
+package fr.iamacat.TileEntitys;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;

@@ -1,6 +1,6 @@
-package Blocks;
+package fr.iamacat.Blocks;
 
-import ExperienceApple.eaMain;
+import fr.iamacat.ExperienceApple.eaMain;
 import net.minecraft.block.BlockAir;
 
 public class experienceGas extends BlockAir{

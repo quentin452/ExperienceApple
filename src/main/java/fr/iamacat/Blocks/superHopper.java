@@ -1,15 +1,15 @@
-package Blocks;
+package fr.iamacat.Blocks;
 
-import java.util.Random;
-
-import ExperienceApple.eaMain;
-import TileEntitys.tileSuperHopper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.iamacat.ExperienceApple.eaMain;
+import fr.iamacat.TileEntitys.tileSuperHopper;
 import net.minecraft.block.BlockHopper;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class superHopper extends BlockHopper{
 	public IIcon top;
